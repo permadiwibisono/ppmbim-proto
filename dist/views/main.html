@@ -1,0 +1,26 @@
+<div class="container" ng-controller="SiswaListCtrl"> 
+  <h1>{{judul}}</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Universitas</th>
+        <th>Alamat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='siswa in siswaList'>
+        <td>{{siswa.id}}</td>
+        <td>{{siswa.Nama}}</td>
+        <td>{{siswa.Gender}}</td>
+        <td>{{siswa.Universitas}}</td>
+        <td>{{siswa.Alamat}}</td>
+        <td>
+          <a class="btn btn-default" href='/#/detail/{{siswa.id}}' role='button'>Show</a>
+        </td>  
+      </tr>
+    </tbody>
+  </table>
+</div>
