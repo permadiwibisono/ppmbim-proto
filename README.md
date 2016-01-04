@@ -1,13 +1,10 @@
 # ppmbim-proto
-
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.14.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `gulp` for building and `gulp serve` for preview.
 
-## Testing
+Ini hanya prototype, install gulp melalui npm jika kamu belum terinstall gulp
 
-Running `grunt test` will run the unit tests with karma.
-# ppmbim-proto ini hanya prototype didevelop dengan yeoman generator (angularjs+gulp) 
