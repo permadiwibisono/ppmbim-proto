@@ -11,11 +11,11 @@
     </div>
   </div>
   <div class="form-group" >
-    <label class="control-label col-sm-2" for="Nama">Nama:</label>
-    <div class="col-sm-10 has-feedback" ng-class="{ 'has-success':a.name.$valid,'has-error':a.name.$invalid }">
+    <label class="control-label col-sm-2" for="Nama">Nama*:</label>
+    <div class="col-sm-10 has-feedback" ng-class="{ 'has-success':(a.name.$valid&&!a.name.$untouched),'has-error':(a.name.$invalid&&!a.name.$untouched) }">
       <input type="text" class="form-control" id="Nama" name="name" ng-model='siswa.Nama'  required>
-      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-show='a.name.$valid'></span>
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-show='a.name.$invalid'></span>
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-show='a.name.$valid&&!a.name.$untouched'></span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-show='a.name.$invalid&&!a.name.$untouched'></span>
     </div>
   </div>
 
@@ -28,22 +28,28 @@
     </select>
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="Umur">Umur:</label>
-    <div class="col-sm-10">
-      <input type="text" pattern="[0-9]*" class="form-control" id="Umur" ng-model='siswa.Umur'>
+  <div class="form-group has-feedback" ng-class="{ 'has-success':(a.Umur.$valid&&!a.Umur.$untouched),'has-error':(a.Umur.$invalid&&!a.Umur.$untouched) }">
+    <label class="control-label col-sm-2" for="Umur">Umur*:</label>
+    <div class="col-sm-10 " >
+      <input type="text" pattern="[0-9]*" class="form-control" id="Umur" name="Umur" ng-model='siswa.Umur' required>
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-show='a.Umur.$valid&&!a.Umur.$untouched'></span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-show='a.Umur.$invalid&&!a.Umur.$untouched'></span>
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="Phone">Phone:</label>
+  <div class="form-group has-feedback" ng-class="{ 'has-success':(a.phone.$valid&&!a.phone.$untouched),'has-error':(a.phone.$invalid&&!a.phone.$untouched) }">
+    <label class="control-label col-sm-2" for="Phone">Phone*:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="Phone" ng-model='siswa.Phone'>
+      <input type="text" class="form-control" id="Phone" name="phone" ng-model='siswa.Phone' required>
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-show='a.phone.$valid&&!a.phone.$untouched'></span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-show='a.phone.$invalid&&!a.phone.$untouched'></span>
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="Ayah">Ayah:</label>
+  <div class="form-group has-feedback" ng-class="{ 'has-success':(a.ayah.$valid&&!a.ayah.$untouched),'has-error':(a.ayah.$invalid&&!a.ayah.$untouched) }">
+    <label class="control-label col-sm-2" for="Ayah">Ayah*:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="Ayah" ng-model='siswa.Ayah'>
+      <input type="text" class="form-control" id="Ayah" name="ayah" ng-model='siswa.Ayah' required>
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-show='a.ayah.$valid&&!a.ayah.$untouched'></span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-show='a.ayah.$invalid&&!a.ayah.$untouched'></span>
     </div>
   </div>
   <div class="form-group">
@@ -61,7 +67,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="Alamat">Alamat:</label>
     <div class="col-sm-10">
-      <textarea rows=4 class='form-control' id='Alamat' ng-model='siswa.Alamat'> </textarea> 
+      <textarea rows=4 class='form-control' id='Alamat' ng-model='siswa.Alamat'> </textarea>
     </div>
   </div>
   <div class="form-group">
